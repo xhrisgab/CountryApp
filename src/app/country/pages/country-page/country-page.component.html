@@ -1,1 +1,6 @@
-<p>country-page works!</p>,
+@if (countryResource.error()) {
+    <app-not-found />
+}
+@if (countryResource.hasValue()) {
+    <h3>Nombre: {{countryResource.value()!.name}}</h3>
+}
