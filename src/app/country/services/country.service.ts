@@ -55,7 +55,7 @@ export class CountryService {
       map((countries) => countries.at(0)),
       catchError( error => {
         console.log('Error fetching', error);
-        return throwError(()=> new Error(`No se pudo obtener paises con el codigo: ${code}`));
+        return throwError(()=> new Error(`No se pudo obtener el pais con el codigo: ${code}`));
         
       })
     );
